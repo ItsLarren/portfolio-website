@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== UNICONS ===============-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">  
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Portfolio Website - Yumul, Larren Joy D.</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <HEader class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo"><span>L</span>a<span>rr</span>e<span>n</span></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#home" class="nav__link active-link">Home</a></li>
+
+            <li><a href="#about" class="nav__link">About</a></li>
+
+            <li><a href="#services" class="nav__link">Services</a></li>
+            
+            <li><a href="#portfolio" class="nav__link">Portfoliio</a></li>
+
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="ui uil-times"></i>
+          </div>
+        </div>
+
+        <div class="nav__socials">
+          <a 
+          href="https://www.facebook.com/larreniieeeee"
+          target="_blank"
+          class="nav__social-link"
+          >
+          <i class="uil uil-facebook-f"></i>
+        </a>
+
+        <a 
+          href="https://x.com/Large_Ren"
+          target="_blank"
+          class="nav__social-link"
+          >
+          <i class="uil-twitter"></i>
+        </a>
+
+        <a 
+          href="https://www.instagram.com/lrrnjy_dzn/"
+         target="_blank"
+         class="nav__social-link"
+          >
+          <i class="uil-instagram"></i>
+        </a>
+
+        <a 
+          href="https://github.com/ItsLarren"
+         target="_blank"
+         class="nav__social-link"
+          >
+          <i class="uil uil-github"></i>
+        </a>
+        </div>
+
+        <div class="nav__btns">
+          <a href="#contact" class="nav__link-btn btn">Let's Talk</a>
+
+          <div class="nav__toggle" id="nat-toggle">
+            <i class="uil uil-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </HEader>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__subtitle">Welcome!</span>
+            <h1 class="home__title">
+              Holla! I'm Larren Joy D. Yumul ,<span> Full Stack Developer.</span>
+            </h1>
+          </div>
+          <img src="assets/img/home2.png" alt="" class="home__img">
+        </div>
+
+      </section>
+
+      <!--=============== ABOUT ===============-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <img src="assets/img/about1.png" alt="" class="about__img">
+
+          <div class="about__content">
+            <h2 class="section__title">About Me</h2>
+
+            <p class="about__description">
+              I am Larren Joy D. Yumul a currently student at Don Honorio Ventura State University under 
+              the program of Bachelor of Scince in Computer Engineering. 
+            </p>
+
+            <div class="tabs__btns">
+              <span class="tabs__btns tab__active" data-target="#skills">Skills</span>
+              <span class="tabs__btns" data-target="#certifications">Certifications</span>
+              <span class="tabs__btns" data-target="#experience">Experience</span>
+              <span class="tabs__btns" data-target="#education">Education</span>
+            </div>
+
+            <div class="tabs__content">
+              <div class="tabs__item tab__active" data-content id="skills">
+                <div class="tabs__data grid">
+                  <p class="tabs__description">
+                    <span>Front-End Developmentt</span> - HTML, CSS, JavaScrip
+                    <span>Engage users with responsive and interactive web interfaces.</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>Back-End Development</span> -  Languages: Python, PHP,C++, HDL, low level C
+                      Database: MySQL
+                    <span>Power the functionality behind the scenes.</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>UI/UX Design</span> - Wireframing and Prototyping
+                    <span>Focus on intuitive design and user experience.</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>Version Control & Deployment</span> -  Version Control: Git, GitHub
+                    <span>Deliver projects reliably and efficiently.</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tabs__item" data-content id="certifications">
+                <div class="tabs__data grid">
+                  <p class="tabs__description">
+                    <span>Participation </span> - CYBERSECURITY: An Overview of Digital Threats and Best Practices. <br>
+                     Boost Your Career and Thrive in the New Normal: Application of Machine Learning and Artificial Intelligence Amidst the Pandemic. <br> 
+                     Going Online and Beyond: An Introduction to Cloud Computing.
+                    <span>2021</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>Partcipation</span> -  CRACK THE CODE: Diving Deep into Enterprise-Level Computer Networking. <br>
+                    Whats Behind the Cloud? A Webinar on a Big Data and Use Cases in The Industry. <br>
+                    ROBOLUTION: Transforming Lives and Practices through the Application of Robotics.
+                    <span>2022</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>Partcipation</span> -  General Assembly: Empowering Tomorrow: Exploring the Frontiers of Technological Innovation <br>
+                    THE MODERN FULL STACK DEVELOPMENT EVOLUTION AND FUTURE. <br>
+                    Unlocking Potential: Career Paths and Growth in Computer Networking. <br>
+                    Navigating the Career Path in Computer Engineering: From Graduation to Professional Success. <br>
+                    Prompt Engineering and Ethical Use of AI. <br>
+                    How to Counter-Act when Hacked. <br>
+                    Unleashing the Power of Cloud Computing and Virtualization. <br>
+                    Tech Leadership 101: Guiding the Next Generation of Computer Engineer Leaders & Building the Future: A Beginners Guide to MVC Web Development. <br>
+                    Beyond the Screen: Virtual and Augmented Reality Revolutionizing IT. <br>
+                    Internet of Things (IoT) and Smart Systems. <br>
+                    Natural Language Processing Fundamentals. <br>
+                    Cloud Foundations: A Gateway to Cloud Computing. <br>
+                    Cloud Foundations: A Gateway to Cloud Computing. <br>
+                    Enhancing Presentations and Visuals with AI. <br>
+                    Data Privacy and Protection in the Digital Age. <br>
+                    Ethical Hacking: Command Injection. <br>
+                    Securing the Future: Protecting Networks in an Era of Digital Transformation. <br>
+                    Learn Python Programming with ChatGPT. <br>
+                    Clojure Introduction: Learn Functional Programming. <br>
+                    Building AI and Machine Learning Solutions with AWS Services: From Fundamentals to Certification Success. 
+                    <span>2024</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tabs__item" data-content id="experience">
+                <div class="tabs__data grid">
+                  <p class="tabs__description">
+                    <span>Database Development (SQL)</span> - Projects 
+                    <span>2021 - Present</span>
+                  </p>
+
+                  <p class="tabs__description">
+                    <span>Web Development (HTML & Front-End Design) <br> 
+                      Back-End Development Projects <br> 
+                      AutoCAD Designing <br>
+                      Hardware Deployment </span> - Project 
+                    <span>2022 - Present</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tabs__item" data-content id="education">
+                <div class="tabs__data grid">
+                  <p class="tabs__description">
+                    <span>Bachelor of Scince in Computer Enginnering</span> - Don Honorio Ventura State University Main Campus 
+                    <span>2021</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SERVICES ===============-->
+      <section class="services section" id="services">
+        <h2 class="section__title">Services</h2>
+        <p class="section__description"> 
+          Welcome to my services page! I’m currently a student with a passion for 
+          technology and hands-on experience in front-end and back-end development, 
+          database management, AutoCAD design, and hardware deployment. While I am still 
+          completing my studies, I have worked on several real-world projects that have helped 
+          me develop a strong skill set in building responsive websites, designing efficient 
+          databases, creating technical drawings, and deploying hardware systems.
+        </p>
+        <div class="services__container container grid">
+          <div class="services__item">
+            <i class="uil uil-database"></i>
+
+            <h3 class="services__title">Database Development & Management</h3>
+            <p class="services__description">I provide SQL database design, implementation, migration, and optimization services to enhance 
+              performance and scalability, ensuring seamless integration and efficiency for your projects.</p>
+          </div>
+
+          <div class="services__item">
+            <i class="uil uil-gitlab"></i>
+
+            <h3 class="services__title">Web Development:</h3>
+            <p class="services__description">I build responsive, user-friendly websites with front-end and full-stack solutions, 
+              ensuring seamless functionality and a great user experience across all devices.</p>
+          </div>
+          
+          <div class="services__item">
+            <i class="uil uil-brackets-curly"></i>
+
+            <h3 class="services__title">Back-End Development</h3>
+            <p class="services__description">I specialize in creating fast, secure APIs and server-side applications, 
+              focusing on data handling, security, and efficient communication between systems.</p>
+          </div>
+
+          <div class="services__item">
+            <i class="uil uil-illustration"></i>
+
+            <h3 class="services__title">AutoCAD Design</h3>
+            <p class="services__description">I create precise technical drawings and 3D models for engineering and architectural projects, 
+              ensuring high-quality design and collaboration with your team.</p>
+          </div>
+
+          <div class="services__item">
+            <i class="uil uil-screw"></i>
+
+            <h3 class="services__title">Hardware Deployment & Setup</h3>
+            <p class="services__description">I handle the installation, configuration, and ongoing maintenance of network systems, IoT devices, 
+              and hardware, ensuring everything operates smoothly and efficiently.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== PORTFOLIO ===============-->
+      <section class="Portfolio section" id="portfolio">
+        <h2 class="section__title">My Projects</h2>
+        <p class="section__description">
+          I have here school related projects and some personal projects
+        </p>
+
+        <div class="portfolio__container container grid">
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/jarvis.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">Personal Project</p>
+              <h3 class="portfolio__title">JARVIS</h3>
+              <p class="portfolio__description">
+                JARVIS was a smart home automation that can detect a bite sounds where alexa can't do.
+                I think I was 2nd yr college while I was doing this project.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/hotel.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School Project</p>
+              <h3 class="portfolio__title">Hotel Reservation System</h3>
+              <p class="portfolio__description">For this project my part was the database system. 
+                This system was designed to automate hotel reservation, user can checks the room availability,
+                make reservations and they can receuve confirmation through email for the confirmation.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/cofeat.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School Project</p>
+              <h3 class="portfolio__title">Cofeat Website</h3>
+              <p class="portfolio__description"> This project design is to promote the business and 
+                make an online venue reservation for events.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/sun.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School Project</p>
+              <h3 class="portfolio__title">Sun Life Philippine Website</h3>
+              <p class="portfolio__description">I created this whole website myself
+                this website is for online information about the company.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/dsp.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School Project</p>
+              <h3 class="portfolio__title">Digital Signal Processing Software</h3>
+              <p class="portfolio__description">Digital Signal Processors (DSP) take 
+                real-world signals like voice, audio, video, temperature, pressure, 
+                or position that have been digitized and then mathematically 
+                manipulate them.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/tally.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School project</p>
+              <h3 class="portfolio__title">Price Tally</h3>
+              <p class="portfolio__description">This is a application that we created on android studio,
+                where this application was for budget management.
+                
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio__item">
+            <img 
+            src="assets/img/object.png" 
+            alt=""
+            class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <p class="portfolio__subtitle">School Project</p>
+              <h3 class="portfolio__title">Real Time Object Detection for PET Bottles</h3>
+              <p class="portfolio__description">This project called the smart bin, where we it can detect realtime for PET Bottles
+                using a YOLO algorithm.
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== CONTACT ===============-->
+      <section class="contact section" id="contact">
+        <div class="contact__container container grid">
+          <div class="contact__content">
+            <h2 class="section__title">Email Me</h2>
+
+            <p class="contact__description">
+              I am blah blah blha. Connect with me via telephone:
+              <a href="tel: 0459630062">0459630062</a> or phone: <a href="tel: 09357338243/09288315431">09357338243/09288315431</a> or email:
+              <a href="mailto:larrenellajoydizon@gmail.com">larrenellajoydizon@gmail.com</a>
+            </p>
+
+            <form class="contact__form" id="contact-form">
+              <div class="contact__form-input">
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="Your Name *"
+                class="contact__input"
+                id="contact-name"
+                />
+              </div>
+
+              <div class="contact__form-input">
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="Your e-mail"
+                class="contact__input"
+                id="contact-email"
+                />
+              </div>
+
+              <div class="contact__form-input">
+                <input 
+                type="text" 
+                name="subject" 
+                placeholder="Write a Subject"
+                class="contact__input"
+                id="contact-subject"
+                />
+              </div>
+
+              <div class="contact__form-input">
+                <textarea name="message" id="contact-message"
+                class="contact__input textarea" placeholder="Your Message">
+              </textarea>
+              </div>
+
+              <input type="submit" value="Submit" class="btn">
+
+              <p class="error__message" id="error-message"></p>
+            </form>
+          </div>
+
+          <img src="assets/img/home1.png" alt="" class="contact__img" />
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <a href="index.html" class="footer__logo"><span>L</span>a<span>rr</span>e<span>n</span></a>
+
+        <div class="footer__socials">
+          <a 
+          href="https://www.facebook.com/larreniieeeee"
+          target="_blank"
+          class="footer__social-link"
+          >
+          <i class="uil-facebook-f"></i>
+        </a>
+
+        <a 
+          href="https://x.com/Large_Ren"
+          target="_blank"
+          class="footer__social-link"
+          >
+          <i class="uil-twitter"></i>
+        </a>
+
+        <a 
+          href="https://www.instagram.com/lrrnjy_dzn/"
+         target="_blank"
+         class="footer__social-link"
+          >
+          <i class="uil-instagram"></i>
+        </a>
+
+        <a 
+          href="https://github.com/ItsLarren"
+         target="_blank"
+         class="footer__social-link"
+          >
+          <i class="uil uil-github"></i>
+        </a>
+        </div>
+
+        <p class="footer__copyright"> &copy; 2024. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scrollup">
+      <i class="uis-rss-interface scrollup__icon"></i>
+    </a>
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+
+    </script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
