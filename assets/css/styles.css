@@ -469,7 +469,7 @@ input {
       font-size: 7em;
   }
   .banner .content .author{
-      color: #fff;
+      color: var(--fave-color);
       padding: 20px;
       text-shadow: 0 10px 20px #000;
       z-index: 2;
