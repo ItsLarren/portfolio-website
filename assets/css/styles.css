@@ -409,7 +409,7 @@ input {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: min(1400px, 100vw);
+  width: min(1400%, 100vw);
   height: max-content;
   padding-bottom: 100px;
   display: flex;
@@ -421,7 +421,7 @@ input {
 .banner .content h1{
   font-family: 'ICA Rubrik';
   font-size: 500%;
-  line-height: 1em;
+  line-height: 0.25%;
   color: var(--fave-color);
   position: relative;
 }
