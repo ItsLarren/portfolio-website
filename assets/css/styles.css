@@ -420,7 +420,7 @@ input {
 }
 .banner .content h1{
   font-family: 'ICA Rubrik';
-  font-size: 8em;
+  font-size: 6em;
   line-height: 1em;
   color: var(--fave-color);
   position: relative;
