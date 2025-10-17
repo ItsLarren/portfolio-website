@@ -1,23 +1,19 @@
-/*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
 
-/*===== MENU SHOW =====*/
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
     });
 }
 
-/*===== MENU HIDDEN =====*/
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
     });
 }
 
-/*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
@@ -26,7 +22,6 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]');
 
 function scrollActive() {
@@ -46,10 +41,8 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
     const header = document.getElementById('header');
-    // when the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
     if (this.scrollY >= 80) header.classList.add('scroll-header');
     else header.classList.remove('scroll-header');
 }
@@ -58,10 +51,7 @@ window.addEventListener('scroll', scrollHeader);
 function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
     
-    // Check if element exists before trying to use it
     if (!scrollUp) return;
-    
-    // when the scroll is greater than 350 viewport height, add the show-scroll class to the scroll top class
     if (this.scrollY >= 350) {
         scrollUp.classList.add('show-scroll');
     } else {
@@ -70,7 +60,6 @@ function scrollUp() {
 }
 
 window.addEventListener('scroll', scrollUp);
-/*==================== ABOUT TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]');
 
@@ -91,7 +80,6 @@ tabs.forEach((tab) => {
         tab.classList.add('tab__active');
     });
 });
-/*=============== CONTACT FORM =============== */
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
@@ -104,21 +92,16 @@ if (contactForm) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        // Check if elements exist
         if (!contactName || !contactEmail || !contactSubject || !contactMessage || !errorMessage) return;
-
-        // Check if the field has value
         if (
             contactName.value === '' || 
             contactEmail.value === '' || 
             contactSubject.value === '' || 
             contactMessage.value === ''
         ) {
-            // Show message
             errorMessage.textContent = 'Please fill in all the input fields';
             errorMessage.classList.remove('color-first');
         } else {
-            // ServiceID - templateID - #form - publickey
             emailjs.sendForm(
                 'service_797yyww', 
                 'template_hctp0tv', 
@@ -126,11 +109,9 @@ if (contactForm) {
                 'GOgV4nN1fZNFxAT-e'
             ).then(
                 () => {
-                    // Show message and add color
                     errorMessage.classList.add('color-first');
                     errorMessage.textContent = 'Message sent ✔️';
 
-                    // Remove message after 5 seconds
                     setTimeout(() => {
                         errorMessage.textContent = '';
                     }, 5000);
@@ -141,7 +122,6 @@ if (contactForm) {
                 }
             );
 
-            // Clear input fields
             contactName.value = '';
             contactEmail.value = '';
             contactSubject.value = '';
