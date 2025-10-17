@@ -692,3 +692,69 @@ input {
 /* For small devices */
 @media screen and (max-width: 350px) {
 }
+
+/*=============== SHOW MENU ===============*/
+.show-menu {
+    display: block !important;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        background-color: var(--container-color);
+        padding: 6rem 3rem 0;
+        transition: right 0.3s var(--transition);
+        display: none;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    
+    .nav__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* Show menu when active */
+    .show-menu {
+        right: 0;
+        display: block;
+    }
+    
+    .nav__socials {
+        display: none;
+    }
+    
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 1rem;
+    }
+}
