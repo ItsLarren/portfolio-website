@@ -2,6 +2,7 @@ const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
 
+// Mobile menu functionality
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
@@ -14,17 +15,27 @@ if (navClose) {
     });
 }
 
+// Close mobile menu when clicking on links
 const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.remove('show-menu');
+    if (navMenu) {
+        navMenu.classList.remove('show-menu');
+    }
 }
-navLink.forEach(n => n.addEventListener('click', linkAction));
+if (navLink.length > 0) {
+    navLink.forEach(n => n.addEventListener('click', linkAction));
+}
 
-const sections = document.querySelectorAll('section[id]');
-
+// Scroll active link functionality (only for index.html)
 function scrollActive() {
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Only run this on index.html or home page
+    if (currentPage !== 'index.html' && currentPage !== '') return;
+    
+    const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
 
     sections.forEach(current => {
@@ -33,21 +44,32 @@ function scrollActive() {
         const sectionId = current.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+            const activeLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+            if (activeLink) {
+                // Remove active class from all links first
+                document.querySelectorAll('.nav__menu a').forEach(link => {
+                    link.classList.remove('active-link');
+                });
+                // Add active class to current section link
+                activeLink.classList.add('active-link');
+            }
         }
     });
 }
-window.addEventListener('scroll', scrollActive);
 
+// Header scroll effect
 function scrollHeader() {
     const header = document.getElementById('header');
-    if (this.scrollY >= 80) header.classList.add('scroll-header');
-    else header.classList.remove('scroll-header');
+    if (header && this.scrollY >= 80) {
+        header.classList.add('scroll-header');
+    } else if (header) {
+        header.classList.remove('scroll-header');
+    }
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+// Scroll up button functionality
 function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
     
@@ -60,26 +82,34 @@ function scrollUp() {
 }
 
 window.addEventListener('scroll', scrollUp);
+
+// Tabs functionality (only for index.html)
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]');
 
-tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target);
+if (tabs.length > 0) {
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const target = document.querySelector(tab.dataset.target);
 
-        tabContents.forEach((tabContent) => {
-            tabContent.classList.remove('tab__active');
+            if (target) {
+                tabContents.forEach((tabContent) => {
+                    tabContent.classList.remove('tab__active');
+                });
+
+                target.classList.add('tab__active');
+
+                tabs.forEach((tab) => {
+                    tab.classList.remove('tab__active');
+                });
+
+                tab.classList.add('tab__active');
+            }
         });
-
-        target.classList.add('tab__active');
-
-        tabs.forEach((tab) => {
-            tab.classList.remove('tab__active');
-        });
-
-        tab.classList.add('tab__active');
     });
-});
+}
+
+// Contact form functionality (only for index.html)
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
@@ -131,3 +161,44 @@ if (contactForm) {
 
     contactForm.addEventListener('submit', sendEmail);
 }
+
+// Update navigation active links based on current page
+function updateActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav__link');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active-link');
+    });
+    
+    // Set active class based on current page
+    if (currentPage === 'business.html') {
+        // For business page, activate the business link
+        const businessLink = document.querySelector('.nav__link[href="business.html"]');
+        if (businessLink) {
+            businessLink.classList.add('active-link');
+        }
+    } else if (currentPage === 'index.html' || currentPage === '') {
+        // For index page, use scroll-based activation
+        window.addEventListener('scroll', scrollActive);
+        // Also set home as active by default if at top
+        if (window.scrollY < 100) {
+            const homeLink = document.querySelector('.nav__link[href="#home"]');
+            if (homeLink) {
+                homeLink.classList.add('active-link');
+            }
+        }
+    }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateActiveNavLink();
+    
+    // Initial scroll active check
+    if (window.location.pathname.split('/').pop() === 'index.html' || 
+        window.location.pathname.split('/').pop() === '') {
+        scrollActive();
+    }
+});

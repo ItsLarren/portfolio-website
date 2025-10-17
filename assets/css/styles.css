@@ -823,3 +823,311 @@ input {
 .img-contain {
   object-fit: contain;
 }
+
+/* Business Page Styles */
+.business-hero {
+  padding-block: 12rem 8rem;
+  background: linear-gradient(135deg, var(--container-color) 0%, var(--body-color) 100%);
+}
+
+.business-hero__container {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.business-hero__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--fav-color);
+  font-weight: var(--weight-500);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.business-hero__title {
+  font-family: var(--second-font);
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-900);
+  margin-bottom: 1.5rem;
+}
+
+.business-hero__title span {
+  color: var(--fave-color);
+}
+
+.business-hero__description {
+  font-size: var(--normal-font-size);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.business-hero__btn {
+  background-color: var(--fav-color);
+  border-color: var(--fav-color);
+}
+
+.business-hero__btn:hover {
+  background-color: transparent;
+  color: var(--fav-color);
+}
+
+.business-hero__img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius);
+  margin-left: auto;
+}
+
+/* Business About Section */
+.business-about {
+  background-color: var(--container-color);
+}
+
+.business-about__content {
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.business-about__text p {
+  margin-bottom: 1.5rem;
+  font-size: var(--normal-font-size);
+  line-height: 1.7;
+}
+
+.business-about__stats {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.business-stat {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--body-color);
+  border-radius: var(--radius);
+  border: 2px solid var(--border-color);
+}
+
+.business-stat h3 {
+  font-size: 2.5rem;
+  color: var(--fav-color);
+  margin-bottom: 0.5rem;
+}
+
+.business-stat p {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* Business Services */
+.business-services__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.business-service__item {
+  background-color: var(--container-color);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform 0.3s var(--transition);
+  border: 2px solid transparent;
+}
+
+.business-service__item:hover {
+  transform: translateY(-10px);
+  border-color: var(--fav-color);
+}
+
+.business-service__item i {
+  font-size: 3rem;
+  color: var(--fav-color);
+  margin-bottom: 1.5rem;
+}
+
+.business-service__item h3 {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
+.business-service__item p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Business Portfolio */
+.business-portfolio {
+  background-color: var(--container-color);
+}
+
+.business-portfolio__container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.business-portfolio__item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 300px;
+}
+
+.business-portfolio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s var(--transition);
+}
+
+.business-portfolio__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 2rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s var(--transition);
+}
+
+.business-portfolio__item:hover .business-portfolio__overlay {
+  transform: translateY(0);
+}
+
+.business-portfolio__item:hover .business-portfolio__img {
+  transform: scale(1.1);
+}
+
+.business-portfolio__overlay h3 {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+/* Business Contact */
+.business-contact__container {
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.business-contact__info {
+  background-color: var(--container-color);
+  padding: 3rem;
+  border-radius: var(--radius);
+}
+
+.business-contact__info h3 {
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+  color: var(--title-color);
+}
+
+.business-contact__info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.business-contact__info i {
+  color: var(--fav-color);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.business-contact__form {
+  background-color: var(--container-color);
+  padding: 3rem;
+  border-radius: var(--radius);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  transition: border-color 0.3s var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--fav-color);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsive Design for Business Page */
+@media screen and (max-width: 992px) {
+  .business-hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .business-hero__img {
+    margin: 0 auto;
+  }
+  
+  .business-about__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .business-about__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .business-contact__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business-services__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .business-portfolio__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .business-about__stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .business-hero {
+    padding-block: 10rem 6rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .business-hero__title {
+    font-size: var(--h2-font-size);
+  }
+  
+  .business-contact__info,
+  .business-contact__form {
+    padding: 2rem;
+  }
+}
+
+.color-first {
+    color: var(--fave-color) !important;
+}
