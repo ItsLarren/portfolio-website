@@ -66,7 +66,7 @@
             </p>
             <a href="#business-contact" class="btn business-hero__btn">Get a Quote</a>
           </div>
-          <img src="assets/img/business-hero.png" alt="3D Printing Business" class="business-hero__img">
+          <img src="assets/img/Larren tech.png" alt="3D Printing Business" class="business-hero__img">
         </div>
       </section>
 
@@ -137,31 +137,101 @@
       <section class="business-portfolio section">
         <div class="container">
           <h2 class="section__title">My Work</h2>
+          <p class="section__description">
+            Browse through my 3D printing creations organized by categories
+          </p>
+          
+          <div class="portfolio-categories">
+            <button class="category-btn active" data-category="keychain-models">Keychain Models</button>
+            <button class="category-btn" data-category="custom-keychains">Custom Design</button>
+            <button class="category-btn" data-category="prototypes">Prototypes</button>
+            <button class="category-btn" data-category="decorative">Decorative Items</button>
+          </div>
+
           <div class="business-portfolio__container grid">
-            <div class="business-portfolio__item">
-              <img src="assets/img/business-item1.jpg" alt="Custom Keychains" class="business-portfolio__img">
+            <!-- Keychain Models -->
+            <div class="business-portfolio__item category-keychain-models" data-category="keychain-models">
+              <img src="assets/img/business/NameKeychain.png" alt="Name Keychain Models" class="business-portfolio__img">
               <div class="business-portfolio__overlay">
-                <h3>Custom Keychains</h3>
+                <h3>Name Keychain Models</h3>
+                <p>Standard Name Keychains Designs</p>
+                <button class="view-gallery-btn" data-gallery="name-keychain-models">View Gallery</button>
+              </div>
+            </div>
+
+            <div class="business-portfolio__item category-keychain-models" data-category="keychain-models">
+              <img src="assets/img/business/CustomKEychian.png" alt="Custom Keychain Models" class="business-portfolio__img">
+              <div class="business-portfolio__overlay">
+                <h3>Custom Keychain Models</h3>
+                <p>Standard Custom Keychain Designs</p>
+                <button class="view-gallery-btn" data-gallery="custom-keychain-models">View Gallery</button>
+              </div>
+            </div>
+
+            <!-- Custom -->
+            <div class="business-portfolio__item category-custom-keychains" data-category="custom-keychains">
+              <img src="assets/img/business/custonDes.png" alt="Custom Keychain 1" class="business-portfolio__img">
+              <div class="business-portfolio__overlay">
+                <h3>Custom Design</h3>
                 <p>Personalized designs</p>
+                <button class="view-gallery-btn" data-gallery="custom-keychains">View Gallery</button>
               </div>
             </div>
-            <div class="business-portfolio__item">
-              <img src="assets/img/business-item2.jpg" alt="3D Models" class="business-portfolio__img">
+
+            <!-- Prototypes -->
+            <div class="business-portfolio__item category-prototypes" data-category="prototypes">
+              <img src="assets/img/business/NameProto.png" alt="Name Prototypes" class="business-portfolio__img">
               <div class="business-portfolio__overlay">
-                <h3>3D Models</h3>
-                <p>Detailed creations</p>
+                <h3>Name Prototypes</h3>
+                <p>Functional prototypes</p>
+                <button class="view-gallery-btn" data-gallery="name-prototypes">View Gallery</button>
               </div>
             </div>
-            <div class="business-portfolio__item">
-              <img src="assets/img/business-item3.jpg" alt="Prototypes" class="business-portfolio__img">
+
+            <div class="business-portfolio__item category-prototypes" data-category="prototypes">
+              <img src="assets/img/business/CustomProto.png" alt="Custom Prototypes" class="business-portfolio__img">
               <div class="business-portfolio__overlay">
-                <h3>Prototypes</h3>
-                <p>Functional designs</p>
+                <h3>Custom Prototypes</h3>
+                <p>Functional prototypes</p>
+                <button class="view-gallery-btn" data-gallery="custom-prototypes">View Gallery</button>
+              </div>
+            </div>
+
+            <!-- Decorative Items -->
+            <div class="business-portfolio__item category-decorative" data-category="decorative">
+              <img src="assets/img/business/decor.png" alt="Decorative Item 1" class="business-portfolio__img">
+              <div class="business-portfolio__overlay">
+                <h3>Decorative Items</h3>
+                <p>You can choose your taste design</p>
+                <button class="view-gallery-btn" data-gallery="decorative">View Gallery</button>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Gallery Modal -->
+      <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal__content">
+          <span class="gallery-modal__close">&times;</span>
+          <h3 class="gallery-modal__title" id="galleryModalTitle">Gallery</h3>
+          
+          <div class="gallery-modal__nav">
+            <button class="gallery-nav-btn prev-btn" id="prevBtn">&#10094;</button>
+            <button class="gallery-nav-btn next-btn" id="nextBtn">&#10095;</button>
+          </div>
+          
+          <div class="gallery-modal__image-container">
+            <img src="" alt="" class="gallery-modal__image" id="galleryModalImage">
+          </div>
+          
+          <div class="gallery-modal__caption" id="galleryModalCaption"></div>
+          
+          <div class="gallery-modal__thumbnails" id="galleryModalThumbnails">
+            <!-- Thumbnails will be generated by JavaScript -->
+          </div>
+        </div>
+      </div>
 
       <!-- Contact Section -->
       <section class="business-contact section" id="business-contact">
