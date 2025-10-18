@@ -178,10 +178,26 @@ document.addEventListener('DOMContentLoaded', function() {
         'decorative': {
             title: 'Decorative Items',
             images: [
-                { src: 'assets/img/business/decorative1.jpg', alt: 'Decorative Item 1', caption: '' },
-                { src: 'assets/img/business/decorative2.jpg', alt: 'Decorative Item 2', caption: '' },
-                { src: 'assets/img/business/decorative3.jpg', alt: 'Decorative Item 3', caption: '' },
-                { src: 'assets/img/business/decorative4.jpg', alt: 'Decorative Item 4', caption: '' }
+                { src: 'assets/img/business/decorative/black_alloy2.png', alt: 'Decorative Item 1', caption: 'Black Alloy Siries 2' },
+                { src: 'assets/img/business/decorative/white_alloy1.png', alt: 'Decorative Item 2', caption: 'White Alloy Siries 1' },
+                { src: 'assets/img/business/decorative/pink_alloy1.png', alt: 'Decorative Item 3', caption: 'Pink Alloy Siries 1' },
+                { src: 'assets/img/business/decorative/purple_alloy1.png', alt: 'Decorative Item 4', caption: 'Purple Alloy Siries 1' },
+                { src: 'assets/img/business/decorative/glass_ball.png', alt: 'Decorative Item 5', caption: 'Glass Ball' },
+                { src: 'assets/img/business/decorative/glass_heart.png', alt: 'Decorative Item 6', caption: 'Glass Heart' },
+                { src: 'assets/img/business/decorative/glass_star.png', alt: 'Decorative Item 7', caption: 'Glass Star' },
+                { src: 'assets/img/business/decorative/silver_pear.png', alt: 'Decorative Item 8', caption: 'Silver Pear' },
+                { src: 'assets/img/business/decorative/silverheart_key03.png', alt: 'Decorative Item 9', caption: 'Silver Key Heart' },
+                { src: 'assets/img/business/decorative/silverwingheart_key08.png', alt: 'Decorative Item 10', caption: 'Silver Wing Key Heart' },
+                { src: 'assets/img/business/decorative/tassle.png', alt: 'Decorative Item 11', caption: 'Tassle' }
+            ]
+        },
+
+        'filament': {
+            title: 'Filament',
+            images: [
+                { src: 'assets/img/business/decorative/FULABS_PLA(Transparent).png', alt: 'Decorative Item 1', caption: 'PLA - Transparent' },
+                { src: 'assets/img/business/decorative/PLA(Luminous Blue-Green).png', alt: 'Decorative Item 2', caption: 'PLA - Luminous Blue-Green' },
+                { src: 'assets/img/business/decorative/PETG(Gray).png', alt: 'Decorative Item 3', caption: 'PETG - Gray' },
             ]
         }
     };
