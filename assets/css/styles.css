@@ -824,7 +824,6 @@ input {
   object-fit: contain;
 }
 
-/* Business Page Styles */
 .business-hero {
   padding-block: 12rem 8rem;
   background: linear-gradient(135deg, var(--container-color) 0%, var(--body-color) 100%);
@@ -881,7 +880,6 @@ input {
   margin-left: auto;
 }
 
-/* Business About Section */
 .business-about {
   background-color: var(--container-color);
 }
@@ -922,7 +920,6 @@ input {
   color: var(--text-color);
 }
 
-/* Business Services */
 .business-services__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -959,7 +956,6 @@ input {
   line-height: 1.6;
 }
 
-/* Business Portfolio */
 .business-portfolio {
   background-color: var(--container-color);
 }
@@ -1008,7 +1004,6 @@ input {
   margin-bottom: 0.5rem;
 }
 
-/* Business Contact */
 .business-contact__container {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -1073,7 +1068,6 @@ input {
   min-height: 120px;
 }
 
-/* Responsive Design for Business Page */
 @media screen and (max-width: 992px) {
   .business-hero__container {
     grid-template-columns: 1fr;
@@ -1132,7 +1126,6 @@ input {
     color: var(--fave-color) !important;
 }
 
-/* Portfolio Categories */
 .portfolio-categories {
   display: flex;
   justify-content: center;
@@ -1160,7 +1153,6 @@ input {
   color: var(--title-color);
 }
 
-/* Portfolio Items with View Gallery Button */
 .business-portfolio__overlay {
   position: absolute;
   bottom: 0;
@@ -1197,7 +1189,6 @@ input {
   background-color: var(--fave-color);
 }
 
-/* Gallery Modal */
 .gallery-modal {
   display: none;
   position: fixed;
@@ -1334,7 +1325,6 @@ input {
   border-color: var(--fav-color);
 }
 
-/* Category Filtering */
 .business-portfolio__item {
   display: block;
   transition: opacity 0.3s var(--transition), transform 0.3s var(--transition);
@@ -1344,7 +1334,6 @@ input {
   display: none;
 }
 
-/* Responsive Design for Gallery */
 @media screen and (max-width: 768px) {
   .portfolio-categories {
     gap: 0.5rem;
@@ -1401,11 +1390,28 @@ input {
   }
 }
 
-/* Additional category classes for the new divided categories */
 .category-name-keychain-models,
 .category-custom-keychain-models,
 .category-name-prototypes,
 .category-custom-prototypes {
   display: block;
   transition: opacity 0.3s var(--transition), transform 0.3s var(--transition);
+}
+
+.error-message {
+    color: #ff4444 !important;
+}
+
+.color-first {
+    color: #4CAF50 !important; 
+}
+
+.contact__form-input input:invalid,
+.contact__form-input textarea:invalid {
+    border-color: #ff4444;
+}
+
+.contact__form-input input:valid,
+.contact__form-input textarea:valid {
+    border-color: #4CAF50;
 }

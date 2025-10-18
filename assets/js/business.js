@@ -1,8 +1,7 @@
-// Business page specific JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Business page loaded successfully!');
     
-    // Gallery data - you can add more images here
     const galleryData = {
         'name-keychain-models': {
         title: 'Name Keychain Models',
@@ -86,13 +85,21 @@ document.addEventListener('DOMContentLoaded', function() {
             { src: 'assets/img/business/keychain-models/c44.jpg', alt: 'Custom Keychain 33', caption: 'Tulips' },
             ]
         },
-        'custom-keychains': {
-            title: 'Custom Keychains',
+        'custom-designs': {
+            title: 'Custom Designs',
             images: [
-                { src: 'assets/img/business/custom1.jpg', alt: 'Custom Keychain 1', caption: '' },
-                { src: 'assets/img/business/custom2.jpg', alt: 'Custom Keychain 2', caption: '' },
-                { src: 'assets/img/business/custom3.jpg', alt: 'Custom Keychain 3', caption: '' },
-                { src: 'assets/img/business/custom4.jpg', alt: 'Custom Keychain 4', caption: '' }
+                { src: 'assets/img/business/custom-design/cd1.png', alt: 'Custom Design 1', caption: '(Autocad)' },
+                { src: 'assets/img/business/custom-design/cd2.png', alt: 'Custom Design 2', caption: '(Autocad)' },
+                { src: 'assets/img/business/custom-design/cd2.png', alt: 'Custom Design 2', caption: '(Autocad)' },
+                { src: 'assets/img/business/custom-design/cd3.png', alt: 'Custom Design 3', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd4.png', alt: 'Custom Design 4', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd5.png', alt: 'Custom Design 5', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd6.png', alt: 'Custom Design 6', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd7.png', alt: 'Custom Design 7', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd8.png', alt: 'Custom Design 8', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd9.png', alt: 'Custom Design 9', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd10.png', alt: 'Custom Design 10', caption: '(Cura)' },
+                { src: 'assets/img/business/custom-design/cd11.png', alt: 'Custom Design 11', caption: '(Cura)' },
             ]
         },
         'name-prototypes': {
@@ -179,7 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Gallery Modal Elements
     const galleryModal = document.getElementById('galleryModal');
     const galleryModalTitle = document.getElementById('galleryModalTitle');
     const galleryModalImage = document.getElementById('galleryModalImage');
@@ -192,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentGallery = '';
     let currentImageIndex = 0;
 
-    // Category Filtering
     const categoryButtons = document.querySelectorAll('.category-btn');
     const portfolioItems = document.querySelectorAll('.business-portfolio__item');
 
@@ -200,11 +205,9 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
             
-            // Update active button
             categoryButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             
-            // Filter items
             portfolioItems.forEach(item => {
                 if (category === 'all' || item.getAttribute('data-category') === category) {
                     item.style.display = 'block';
@@ -223,18 +226,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // View Gallery Buttons
     const viewGalleryButtons = document.querySelectorAll('.view-gallery-btn');
 
     viewGalleryButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent triggering the portfolio item click
+            e.stopPropagation(); 
             const gallery = this.getAttribute('data-gallery');
             openGallery(gallery);
         });
     });
 
-    // Open Gallery Function
     function openGallery(galleryName) {
         if (!galleryData[galleryName]) return;
         
@@ -246,24 +247,21 @@ document.addEventListener('DOMContentLoaded', function() {
         generateThumbnails();
         
         galleryModal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden'; 
     }
 
-    // Update Gallery Image
     function updateGalleryImage() {
         const currentImage = galleryData[currentGallery].images[currentImageIndex];
         galleryModalImage.src = currentImage.src;
         galleryModalImage.alt = currentImage.alt;
         galleryModalCaption.textContent = currentImage.caption;
         
-        // Update active thumbnail
         const thumbnails = document.querySelectorAll('.thumbnail');
         thumbnails.forEach((thumb, index) => {
             thumb.classList.toggle('active', index === currentImageIndex);
         });
     }
 
-    // Generate Thumbnails
     function generateThumbnails() {
         galleryModalThumbnails.innerHTML = '';
         
@@ -280,7 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Navigation Functions
     function showNextImage() {
         currentImageIndex = (currentImageIndex + 1) % galleryData[currentGallery].images.length;
         updateGalleryImage();
@@ -291,18 +288,16 @@ document.addEventListener('DOMContentLoaded', function() {
         updateGalleryImage();
     }
 
-    // Event Listeners for Modal
     if (nextBtn) nextBtn.addEventListener('click', showNextImage);
     if (prevBtn) prevBtn.addEventListener('click', showPrevImage);
 
     if (closeModal) {
         closeModal.addEventListener('click', function() {
             galleryModal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto'; 
         });
     }
 
-    // Close modal when clicking outside the content
     galleryModal.addEventListener('click', function(e) {
         if (e.target === galleryModal) {
             galleryModal.style.display = 'none';
@@ -310,7 +305,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', function(e) {
         if (galleryModal.style.display === 'block') {
             if (e.key === 'Escape') {
@@ -324,7 +318,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Business contact form handling (existing code)
     const businessContactForm = document.getElementById('business-contact-form');
     
     if (businessContactForm) {
@@ -341,13 +334,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please fill in all required fields.');
                 return;
             }
-            
-            alert('Thank you for your inquiry! I will get back to you within 24 hours.');
-            this.reset();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            if (typeof emailjs === 'undefined') {
+                alert('Email service not loaded. Please try again later.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
+            emailjs.sendForm(
+                'service_0wt0p2q',
+                'template_bm5bkvp', 
+                '#business-contact-form',
+                'd7Fsk1hnjBTfgBSXw'
+            ).then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+                    this.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                },
+                (error) => {
+                    console.error('FAILED...', error);
+                    alert('Oops! Something went wrong. Please try again or contact me directly at larrenellajoydizon@gmail.com');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            );
         });
     }
     
-    // Business page scroll functionality
     function businessScrollUp() {
         const scrollUp = document.getElementById('scroll-up');
         
@@ -361,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', businessScrollUp);
     
-    // Set active navigation for business page
     function setBusinessActiveNav() {
         const navLinks = document.querySelectorAll('.nav__link');
         const businessLink = document.querySelector('.nav__link[href="business.html"]');
