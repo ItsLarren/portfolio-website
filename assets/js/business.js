@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'assets/img/business/decorative/purple_alloy1.png', alt: 'Decorative Item 4', caption: 'Purple Alloy Siries 1' },
                 { src: 'assets/img/business/decorative/glass_ball.png', alt: 'Decorative Item 5', caption: 'Glass Ball' },
                 { src: 'assets/img/business/decorative/glass_heart.png', alt: 'Decorative Item 6', caption: 'Glass Heart' },
-                { src: 'assets/img/business/decorative/glass_star.png', alt: 'Decorative Item 7', caption: 'Glass Star' },
+                { src: 'assets/img/business/decorative/glass_Star.png', alt: 'Decorative Item 7', caption: 'Glass Star' },
                 { src: 'assets/img/business/decorative/silver_pear.png', alt: 'Decorative Item 8', caption: 'Silver Pear' },
                 { src: 'assets/img/business/decorative/silverheart_key03.png', alt: 'Decorative Item 9', caption: 'Silver Key Heart' },
                 { src: 'assets/img/business/decorative/silverwingheart_key08.png', alt: 'Decorative Item 10', caption: 'Silver Wing Key Heart' },
