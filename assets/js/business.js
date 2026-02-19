@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'name-keychain-models': {
         title: 'Name Keychain Models',
         images: [
+            { src: 'assets/img/business/keychain-models/n40.jpg', alt: 'Name Keychain 40', caption: 'Name keychain new design (AutoCad)' },
             { src: 'assets/img/business/keychain-models/n1,n16,n17.jpg', alt: 'Name Keychain 1', caption: 'Afina, Dhays and Aliesha (Orca)' },
             { src: 'assets/img/business/keychain-models/n2-1.jpg', alt: 'Name Keychain 2', caption: 'Sam (AutoCad)' },
             { src: 'assets/img/business/keychain-models/n2-3.jpg', alt: 'Name Keychain 3', caption: 'Sam (Orca)' },
