@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'custom-keychain-models': {
             title: 'Custom Keychain Models',
             images: [
+            { src: 'assets/img/business/keychain-models/c45.jpg', alt: 'Custom Keychain 34', caption: 'Ghost' },
+            { src: 'assets/img/business/keychain-models/c46.jpg', alt: 'Custom Keychain 35', caption: 'Skull' },    
+            { src: 'assets/img/business/keychain-models/c47.jpg', alt: 'Custom Keychain 36', caption: 'Pumpkin' },
             { src: 'assets/img/business/keychain-models/c1.jpg', alt: 'Custom Keychain 1', caption: 'Grow a Garden Cherry Blossom' },
             { src: 'assets/img/business/keychain-models/c2.jpg', alt: 'Custom Keychain 2', caption: 'Grow a Garden Watermelon' },
             { src: 'assets/img/business/keychain-models/c3.jpg', alt: 'Custom Keychain 3', caption: 'Minecraft Pig' },
@@ -87,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { src: 'assets/img/business/keychain-models/c31.jpg', alt: 'Custom Keychain 31', caption: 'Ribbon' },
             { src: 'assets/img/business/keychain-models/c44-2.jpg', alt: 'Custom Keychain 32', caption: 'Rose' },
             { src: 'assets/img/business/keychain-models/c44.jpg', alt: 'Custom Keychain 33', caption: 'Tulips' },
-            { src: 'assets/img/business/keychain-models/c45.jpg', alt: 'Custom Keychain 34', caption: 'Ghost' },
-            { src: 'assets/img/business/keychain-models/c46.jpg', alt: 'Custom Keychain 35', caption: 'Skull' },    
-            { src: 'assets/img/business/keychain-models/c47.jpg', alt: 'Custom Keychain 36', caption: 'Pumpkin' },
             ]
         },
         'custom-designs': {
@@ -112,7 +112,20 @@ document.addEventListener('DOMContentLoaded', function() {
         'name-prototypes': {
         title: 'Name Prototypes',
         images: [
-            { src: 'assets/img/business/prototypes/n18.png', alt: 'Name Prototype 1', caption: 'New Design for the Name Keychain' },
+            { src: 'assets/img/business/prototypes/n31.png', alt: 'Name Prototype 31', caption: '4pcs with picture' },
+            { src: 'assets/img/business/prototypes/n30.png', alt: 'Name Prototype 30', caption: 'Tine with picture' },
+            { src: 'assets/img/business/prototypes/n29.png', alt: 'Name Prototype 29', caption: 'Gel with picture' },
+            { src: 'assets/img/business/prototypes/n28.png', alt: 'Name Prototype 28', caption: 'Kath with picture' },
+            { src: 'assets/img/business/prototypes/n27.png', alt: 'Name Prototype 27', caption: 'Christine Joy with picture' },
+            { src: 'assets/img/business/prototypes/n26.png', alt: 'Name Prototype 26', caption: '15 pcs Name prototype' },
+            { src: 'assets/img/business/prototypes/n25.png', alt: 'Name Prototype 25', caption: '6pcs Name prototype' },
+            { src: 'assets/img/business/prototypes/n24.png', alt: 'Name Prototype 24', caption: 'Engr. Kristine name prototype' },
+            { src: 'assets/img/business/prototypes/n23.png', alt: 'Name Prototype 23', caption: 'Engr. Anj name prototype' },
+            { src: 'assets/img/business/prototypes/n22.png', alt: 'Name Prototype 22', caption: 'Engr. Juvy name prototype' },
+            { src: 'assets/img/business/prototypes/n21.png', alt: 'Name Prototype 21', caption: 'Engr. Ruby name prototype' },
+            { src: 'assets/img/business/prototypes/n20.png', alt: 'Name Prototype 20', caption: 'Engr. Asil name prototype' },
+            { src: 'assets/img/business/prototypes/n19.png', alt: 'Name Prototype 19', caption: 'Engr. Vincent name prototype' },
+            { src: 'assets/img/business/prototypes/n18.png', alt: 'Name Prototype 18', caption: 'RL name prototype' },
             { src: 'assets/img/business/prototypes/n1.png', alt: 'Name Prototype 1', caption: 'Dhays name prototype' },
             { src: 'assets/img/business/prototypes/n2.png', alt: 'Name Prototype 2', caption: 'Sam name prototype' },
             { src: 'assets/img/business/prototypes/n3.png', alt: 'Name Prototype 3', caption: 'Shara prototype' },
@@ -135,6 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
         'custom-prototypes': {
             title: 'Custom Prototypes',
             images: [
+                { src: 'assets/img/business/prototypes/c52.png', alt: 'Custom Prototype 52', caption: 'Skull custom prototype' },
+                { src: 'assets/img/business/prototypes/c51.png', alt: 'Custom Prototype 51', caption: 'Pumpkin custom prototype' },
+                { src: 'assets/img/business/prototypes/c50.png', alt: 'Custom Prototype 50', caption: '4pcs Pumpkin custom prototype' },
+                { src: 'assets/img/business/prototypes/c49.png', alt: 'Custom Prototype 49', caption: '4pcs Ghost custom prototype' },
+                { src: 'assets/img/business/prototypes/c48.png', alt: 'Custom Prototype 48', caption: 'Ghost custom prototype' },
+                { src: 'assets/img/business/prototypes/c47.png', alt: 'Custom Prototype 47', caption: 'Snoopy custom prototype' },
                 { src: 'assets/img/business/prototypes/c44.png', alt: 'Custom Prototype 1', caption: 'Flower custom prototype' },
                 { src: 'assets/img/business/prototypes/c45.png', alt: 'Custom Prototype 2', caption: 'Flower Top view model custom prototype' },
                 { src: 'assets/img/business/prototypes/c1.png', alt: 'Custom Prototype 3', caption: 'Minecraft Potion 4pcs custom prototype' },
