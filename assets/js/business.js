@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'name-keychain-models': {
         title: 'Name Keychain Models',
         images: [
+            { src: 'assets/img/business/keychain-models/n53.jpg', alt: 'Name Keychain 43', caption: 'New Name Keychain Design (AutoCad)' },
+            { src: 'assets/img/business/keychain-models/n52.jpg', alt: 'Name Keychain 42', caption: 'New Name Keychain Design (AutoCad)' },
+            { src: 'assets/img/business/keychain-models/n51.jpg', alt: 'Name Keychain 41', caption: 'New Name Keychain Design (AutoCad)' },
             { src: 'assets/img/business/keychain-models/n50.jpg', alt: 'Name Keychain 40', caption: 'New Name Keychain Design (AutoCad)' },
             { src: 'assets/img/business/keychain-models/n1,n16,n17.jpg', alt: 'Name Keychain 1', caption: 'Afina, Dhays and Aliesha (Orca)' },
             { src: 'assets/img/business/keychain-models/n2-1.jpg', alt: 'Name Keychain 2', caption: 'Sam (AutoCad)' },
@@ -84,6 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
             { src: 'assets/img/business/keychain-models/c31.jpg', alt: 'Custom Keychain 31', caption: 'Ribbon' },
             { src: 'assets/img/business/keychain-models/c44-2.jpg', alt: 'Custom Keychain 32', caption: 'Rose' },
             { src: 'assets/img/business/keychain-models/c44.jpg', alt: 'Custom Keychain 33', caption: 'Tulips' },
+            { src: 'assets/img/business/keychain-models/c45.jpg', alt: 'Custom Keychain 34', caption: 'Ghost' },
+            { src: 'assets/img/business/keychain-models/c46.jpg', alt: 'Custom Keychain 35', caption: 'Skull' },    
+            { src: 'assets/img/business/keychain-models/c47.jpg', alt: 'Custom Keychain 36', caption: 'Pumpkin' },
             ]
         },
         'custom-designs': {
